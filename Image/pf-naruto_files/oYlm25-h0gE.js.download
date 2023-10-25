@@ -1,0 +1,5 @@
+;/*FB_PKG_DELIM*/
+
+__d("LowerDomainRegex",[],(function(a,b,c,d,e,f){"use strict";a=/(^|\.)(facebook|facebookcorewwwi|facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd|workplace|bulletin|www.novi)\..*/;b=/\.(facebook\.(sg|net)|facebookcorewwwi\.(?:test)?onion|facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd\.onion|workplace\.com|novi\.com|bulletin\.com)$/;f.domainRegex=a;f.hostnameRegex=b}),66);
+__d("lowerFacebookDomain",["LowerDomainRegex"],(function(a,b,c,d,e,f,g){b=window.location.hostname.match(d("LowerDomainRegex").hostnameRegex);var h=b?b[1]:"facebook.com";a.setDomain=function(a){h=a};a.isValidDocumentDomain=function(){return document.domain==h};function a(){document.domain=h}c=a;g["default"]=c}),98);
+__d("isInIframe",[],(function(a,b,c,d,e,f){var g=typeof window!=="undefined"&&window.top!=null&&window!=window.top;function a(){return g}f["default"]=a}),66);
